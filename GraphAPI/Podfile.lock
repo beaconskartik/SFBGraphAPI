@@ -1,0 +1,20 @@
+PODS:
+  - ADALiOS (1.2.10)
+  - RxSwift (4.2.0)
+
+DEPENDENCIES:
+  - ADALiOS
+  - RxSwift (~> 4.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ADALiOS
+    - RxSwift
+
+SPEC CHECKSUMS:
+  ADALiOS: 505c364827c25dd37811e660a943dace9c0ff094
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+
+PODFILE CHECKSUM: b4e45f762a3d2c623dbb24c8b45d9801032bff56
+
+COCOAPODS: 1.5.3

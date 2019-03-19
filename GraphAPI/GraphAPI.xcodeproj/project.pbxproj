@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F259935B66085ABB349B855 /* Pods_GraphAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F084E54DD9D1D63FA18E59D /* Pods_GraphAPI.framework */; };
 		B33AF5B2224154B300C649D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AF5B1224154B300C649D4 /* AppDelegate.swift */; };
 		B33AF5B4224154B300C649D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AF5B3224154B300C649D4 /* ViewController.swift */; };
 		B33AF5B7224154B300C649D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33AF5B5224154B300C649D4 /* Main.storyboard */; };
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BF7D7993F6C17B11DD7746D /* Pods-GraphAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphAPI/Pods-GraphAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		5F084E54DD9D1D63FA18E59D /* Pods_GraphAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB1A83E945622BCF3242A87 /* Pods-GraphAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphAPI/Pods-GraphAPI.release.xcconfig"; sourceTree = "<group>"; };
 		B33AF5AE224154B300C649D4 /* GraphAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33AF5B1224154B300C649D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B33AF5B3224154B300C649D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F259935B66085ABB349B855 /* Pods_GraphAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DC29329ABA33B7729C43FB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F084E54DD9D1D63FA18E59D /* Pods_GraphAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B33AF5A5224154B300C649D4 = {
 			isa = PBXGroup;
 			children = (
 				B33AF5B0224154B300C649D4 /* GraphAPI */,
 				B33AF5C8224154B400C649D4 /* GraphAPITests */,
 				B33AF5AF224154B300C649D4 /* Products */,
+				D0581166DCFEE724C02BDC93 /* Pods */,
+				4DC29329ABA33B7729C43FB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +114,15 @@
 			path = GraphAPITests;
 			sourceTree = "<group>";
 		};
+		D0581166DCFEE724C02BDC93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BF7D7993F6C17B11DD7746D /* Pods-GraphAPI.debug.xcconfig */,
+				6CB1A83E945622BCF3242A87 /* Pods-GraphAPI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33AF5CE224154B400C649D4 /* Build configuration list for PBXNativeTarget "GraphAPI" */;
 			buildPhases = (
+				3D1A488B6BEAAAB475C7E8D3 /* [CP] Check Pods Manifest.lock */,
 				B33AF5AA224154B300C649D4 /* Sources */,
 				B33AF5AB224154B300C649D4 /* Frameworks */,
 				B33AF5AC224154B300C649D4 /* Resources */,
+				FB8021D40F2A41B89192E276 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +220,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D1A488B6BEAAAB475C7E8D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GraphAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB8021D40F2A41B89192E276 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GraphAPI/Pods-GraphAPI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ADALiOS/ADALiOS.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADALiOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GraphAPI/Pods-GraphAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B33AF5AA224154B300C649D4 /* Sources */ = {
@@ -362,6 +429,7 @@
 		};
 		B33AF5CF224154B400C649D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF7D7993F6C17B11DD7746D /* Pods-GraphAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +448,7 @@
 		};
 		B33AF5D0224154B400C649D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB1A83E945622BCF3242A87 /* Pods-GraphAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
