@@ -15,6 +15,12 @@
 		B33AF5BC224154B400C649D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33AF5BB224154B400C649D4 /* Assets.xcassets */; };
 		B33AF5BF224154B400C649D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33AF5BD224154B400C649D4 /* LaunchScreen.storyboard */; };
 		B33AF5CA224154B400C649D4 /* GraphAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33AF5C9224154B400C649D4 /* GraphAPITests.swift */; };
+		B35AFE3E2241670800F2B827 /* ADALiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35AFE3D2241670800F2B827 /* ADALiOS.framework */; };
+		B35AFE402241670800F2B827 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35AFE3F2241670800F2B827 /* RxSwift.framework */; };
+		B35AFE422241671100F2B827 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35AFE412241671100F2B827 /* UIKit.framework */; };
+		B35AFE442241671700F2B827 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35AFE432241671700F2B827 /* AVFoundation.framework */; };
+		B35AFE46224167AD00F2B827 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE45224167AD00F2B827 /* TokenManager.swift */; };
+		B35AFE492241707D00F2B827 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE482241707D00F2B827 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,12 @@
 		B33AF5C5224154B400C649D4 /* GraphAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33AF5C9224154B400C649D4 /* GraphAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPITests.swift; sourceTree = "<group>"; };
 		B33AF5CB224154B400C649D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35AFE3D2241670800F2B827 /* ADALiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ADALiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35AFE3F2241670800F2B827 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35AFE412241671100F2B827 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B35AFE432241671700F2B827 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B35AFE45224167AD00F2B827 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		B35AFE482241707D00F2B827 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35AFE442241671700F2B827 /* AVFoundation.framework in Frameworks */,
+				B35AFE422241671100F2B827 /* UIKit.framework in Frameworks */,
+				B35AFE3E2241670800F2B827 /* ADALiOS.framework in Frameworks */,
+				B35AFE402241670800F2B827 /* RxSwift.framework in Frameworks */,
 				8F259935B66085ABB349B855 /* Pods_GraphAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +82,10 @@
 		4DC29329ABA33B7729C43FB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B35AFE432241671700F2B827 /* AVFoundation.framework */,
+				B35AFE412241671100F2B827 /* UIKit.framework */,
+				B35AFE3D2241670800F2B827 /* ADALiOS.framework */,
+				B35AFE3F2241670800F2B827 /* RxSwift.framework */,
 				5F084E54DD9D1D63FA18E59D /* Pods_GraphAPI.framework */,
 			);
 			name = Frameworks;
@@ -94,6 +114,7 @@
 		B33AF5B0224154B300C649D4 /* GraphAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B35AFE472241706400F2B827 /* View */,
 				B33AF5B1224154B300C649D4 /* AppDelegate.swift */,
 				B33AF5B3224154B300C649D4 /* ViewController.swift */,
 				B33AF5B5224154B300C649D4 /* Main.storyboard */,
@@ -101,6 +122,7 @@
 				B33AF5BD224154B400C649D4 /* LaunchScreen.storyboard */,
 				B33AF5C0224154B400C649D4 /* Info.plist */,
 				B33AF5B8224154B300C649D4 /* GraphAPI.xcdatamodeld */,
+				B35AFE45224167AD00F2B827 /* TokenManager.swift */,
 			);
 			path = GraphAPI;
 			sourceTree = "<group>";
@@ -112,6 +134,14 @@
 				B33AF5CB224154B400C649D4 /* Info.plist */,
 			);
 			path = GraphAPITests;
+			sourceTree = "<group>";
+		};
+		B35AFE472241706400F2B827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B35AFE482241707D00F2B827 /* GraphView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D0581166DCFEE724C02BDC93 /* Pods */ = {
@@ -267,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35AFE492241707D00F2B827 /* GraphView.swift in Sources */,
 				B33AF5B4224154B300C649D4 /* ViewController.swift in Sources */,
+				B35AFE46224167AD00F2B827 /* TokenManager.swift in Sources */,
 				B33AF5B2224154B300C649D4 /* AppDelegate.swift in Sources */,
 				B33AF5BA224154B300C649D4 /* GraphAPI.xcdatamodeld in Sources */,
 			);
