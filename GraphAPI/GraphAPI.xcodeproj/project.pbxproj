@@ -21,6 +21,13 @@
 		B35AFE442241671700F2B827 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35AFE432241671700F2B827 /* AVFoundation.framework */; };
 		B35AFE46224167AD00F2B827 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE45224167AD00F2B827 /* TokenManager.swift */; };
 		B35AFE492241707D00F2B827 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE482241707D00F2B827 /* GraphView.swift */; };
+		B35AFE5422417F8800F2B827 /* GraphVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE5322417F8800F2B827 /* GraphVc.swift */; };
+		B35AFE5722417FEE00F2B827 /* GraphVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE5622417FEE00F2B827 /* GraphVM.swift */; };
+		B35AFE5A2241824D00F2B827 /* ITokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE592241824D00F2B827 /* ITokenManager.swift */; };
+		B35AFE5D2241836600F2B827 /* LogSubscriberImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE5C2241836600F2B827 /* LogSubscriberImpl.swift */; };
+		B35AFE5F224184F400F2B827 /* SubscriberImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE5E224184F400F2B827 /* SubscriberImpl.swift */; };
+		B35AFE61224187E900F2B827 /* GraphAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE60224187E900F2B827 /* GraphAPIImpl.swift */; };
+		B35AFE63224187FC00F2B827 /* IGraphAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35AFE62224187FC00F2B827 /* IGraphAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,13 @@
 		B35AFE432241671700F2B827 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B35AFE45224167AD00F2B827 /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		B35AFE482241707D00F2B827 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		B35AFE5322417F8800F2B827 /* GraphVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVc.swift; sourceTree = "<group>"; };
+		B35AFE5622417FEE00F2B827 /* GraphVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVM.swift; sourceTree = "<group>"; };
+		B35AFE592241824D00F2B827 /* ITokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITokenManager.swift; sourceTree = "<group>"; };
+		B35AFE5C2241836600F2B827 /* LogSubscriberImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSubscriberImpl.swift; sourceTree = "<group>"; };
+		B35AFE5E224184F400F2B827 /* SubscriberImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriberImpl.swift; sourceTree = "<group>"; };
+		B35AFE60224187E900F2B827 /* GraphAPIImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphAPIImpl.swift; sourceTree = "<group>"; };
+		B35AFE62224187FC00F2B827 /* IGraphAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGraphAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,9 @@
 		B33AF5B0224154B300C649D4 /* GraphAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B35AFE5B2241835800F2B827 /* Utils */,
+				B35AFE58224181FE00F2B827 /* Backend */,
+				B35AFE5522417FDD00F2B827 /* ViewModel */,
 				B35AFE472241706400F2B827 /* View */,
 				B33AF5B1224154B300C649D4 /* AppDelegate.swift */,
 				B33AF5B3224154B300C649D4 /* ViewController.swift */,
@@ -122,7 +139,6 @@
 				B33AF5BD224154B400C649D4 /* LaunchScreen.storyboard */,
 				B33AF5C0224154B400C649D4 /* Info.plist */,
 				B33AF5B8224154B300C649D4 /* GraphAPI.xcdatamodeld */,
-				B35AFE45224167AD00F2B827 /* TokenManager.swift */,
 			);
 			path = GraphAPI;
 			sourceTree = "<group>";
@@ -139,9 +155,38 @@
 		B35AFE472241706400F2B827 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B35AFE5322417F8800F2B827 /* GraphVc.swift */,
 				B35AFE482241707D00F2B827 /* GraphView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B35AFE5522417FDD00F2B827 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B35AFE5622417FEE00F2B827 /* GraphVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B35AFE58224181FE00F2B827 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				B35AFE45224167AD00F2B827 /* TokenManager.swift */,
+				B35AFE592241824D00F2B827 /* ITokenManager.swift */,
+				B35AFE60224187E900F2B827 /* GraphAPIImpl.swift */,
+				B35AFE62224187FC00F2B827 /* IGraphAPI.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		B35AFE5B2241835800F2B827 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B35AFE5C2241836600F2B827 /* LogSubscriberImpl.swift */,
+				B35AFE5E224184F400F2B827 /* SubscriberImpl.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		D0581166DCFEE724C02BDC93 /* Pods */ = {
@@ -278,11 +323,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GraphAPI/Pods-GraphAPI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ADALiOS/ADALiOS.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADALiOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +344,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35AFE5D2241836600F2B827 /* LogSubscriberImpl.swift in Sources */,
+				B35AFE5F224184F400F2B827 /* SubscriberImpl.swift in Sources */,
+				B35AFE5722417FEE00F2B827 /* GraphVM.swift in Sources */,
+				B35AFE5A2241824D00F2B827 /* ITokenManager.swift in Sources */,
+				B35AFE61224187E900F2B827 /* GraphAPIImpl.swift in Sources */,
 				B35AFE492241707D00F2B827 /* GraphView.swift in Sources */,
+				B35AFE5422417F8800F2B827 /* GraphVc.swift in Sources */,
+				B35AFE63224187FC00F2B827 /* IGraphAPI.swift in Sources */,
 				B33AF5B4224154B300C649D4 /* ViewController.swift in Sources */,
 				B35AFE46224167AD00F2B827 /* TokenManager.swift in Sources */,
 				B33AF5B2224154B300C649D4 /* AppDelegate.swift in Sources */,
@@ -473,7 +527,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skype.GraphAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -492,7 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skype.GraphAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

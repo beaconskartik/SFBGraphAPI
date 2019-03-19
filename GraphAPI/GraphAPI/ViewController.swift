@@ -11,21 +11,19 @@ import RxSwift
 
 
 class ViewController: UIViewController {
-    
-    let bag = DisposeBag()
+   
+    private var graphVc: GraphVc?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let tokenManager = TokenManager()
-        tokenManager.getToken()
-            .do(onNext: { (token) in
-                 print ("Access Token to be used in Graph API \(token)")
-            }, onError: { (error) in
-                print ("Error while fetching token \(error.localizedDescription)")
-            })
-            .subscribe()
-            .disposed(by: bag)
+        let graphAPI = GraphAPIImpl()
+        
+        graphVc = GraphVc(frame: UIScreen.main.bounds,
+                              tokenManager: tokenManager,
+                              graphAPI: graphAPI)
+        self.view = graphVc?.graphView
     }
 }
 

@@ -14,7 +14,7 @@ public enum TokenError: Error {
     case runTimeError (String)
 }
 
-class TokenManager {
+class TokenManager: ITokenManager {
     
     // Got from Azure
     private let kClientID = "1a5d4dfb-338b-4e42-8e15-167096c4848f"
