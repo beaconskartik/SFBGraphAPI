@@ -9,9 +9,13 @@
 import Foundation
 import RxSwift
 
+public enum TokenError: Error {
+    case runTimeError (String)
+}
+
 protocol ITokenManager {
     
-    func getToken() -> Observable<String>
+    func getTokenInteractively() -> Observable<String>
     
-    // implement other API here like getToken Scerectly here
+    func getTokenSilently() -> Observable<String>
 }

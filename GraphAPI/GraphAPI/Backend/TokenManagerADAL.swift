@@ -1,3 +1,4 @@
+
 //
 //  TokenManager.swift
 //  GraphAPI
@@ -10,12 +11,9 @@ import Foundation
 import ADALiOS
 import RxSwift
 
-public enum TokenError: Error {
-    case runTimeError (String)
-}
 
 class TokenManager: ITokenManager {
-    
+ 
     // Got from Azure
     private let kClientID = "1a5d4dfb-338b-4e42-8e15-167096c4848f"
     
@@ -35,8 +33,12 @@ class TokenManager: ITokenManager {
         adalToken = ReplaySubject.create(bufferSize: 1)
     }
     
-    public func getToken() -> Observable<String> {
+    public func getTokenInteractively() -> Observable<String> {
         return adalToken.amb(getTokenImpl())
+    }
+    
+    func getTokenSilently() -> Observable<String> {
+        return adalToken
     }
     
     private func getTokenImpl() -> Observable<String> {

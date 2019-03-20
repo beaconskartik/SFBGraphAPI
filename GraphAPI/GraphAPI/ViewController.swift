@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let tokenManager = TokenManager()
+        let tokenManager = TokenManagerMSAL()
         let graphAPI = GraphAPIImpl()
         
         graphVc = GraphVc(frame: UIScreen.main.bounds,

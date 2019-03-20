@@ -50,7 +50,7 @@ class GraphVM {
     
     private func fetchADALToken() {
         tokenManager
-            .getToken()
+            .getTokenInteractively()
             .do(onNext: { [weak self] (token) in
                 guard let self = self else { return }
                 self.isTokenFetched.accept(true)
@@ -65,6 +65,12 @@ class GraphVM {
     
     // TODO ideally it should automatically call the fetchADALToken API then trigger graph search
     private func callGraphAPIWithToken() {
-        
+        graphAPI
+            .getMeData(token: token!)
+            .do(onNext: { (data) in
+                print ("Information: \(data)")
+            })
+            .subscribe(LogSubscriberImpl(tag: "kartik", prefix: "callGraphAPIWithToken"))
+            .disposed(by: disposeBag)
     }
 }

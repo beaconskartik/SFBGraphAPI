@@ -25,7 +25,7 @@
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>mygraphapi</string>
+				<string>msald40357d5-e185-4deb-9ff0-fd6c1f363f4a</string>
 			</array>
 		</dict>
 	</array>
@@ -54,9 +54,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>clientId</key>
-	<string>d40357d5-e185-4deb-9ff0-fd6c1f363f4a</string>
-	<key>redirectUri</key>
-	<string>mygraphapi://com.skype.GraphAPI</string>
 </dict>
 </plist>
